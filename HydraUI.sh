@@ -121,7 +121,7 @@ EOF
 
 # Check if user wants to proceed with installation
 confirm_installation() {
-    echo -e "${YELLOW}This installer will set up HydraUI Pixel UI theme on your system.${NC}"
+    echo -e "${YELLOW}This installer will set up HydraUI Professional UI theme on your system.${NC}"
     echo -e "${YELLOW}The following components will be installed:${NC}"
     echo "  • Layan GTK Theme"
     echo "  • Candy Icon Pack"

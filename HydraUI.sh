@@ -207,7 +207,7 @@ show_success() {
 main() {
     mkdir -p "$TEMP_DIR"
     show_banner
-    [[ -f "$INSTALL_MARKER" ]] && log WARN "HydraUI Professional already installed"
+    check_existing_installation
     confirm_installation
     check_requirements
     install_dependencies

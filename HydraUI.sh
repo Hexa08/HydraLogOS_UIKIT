@@ -2,7 +2,7 @@
 
 # HydraUI Pixel Professional Installer
 # Version: 2.0.0
-# Author: HydraUI Team
+# Author: Hexa Innovate Org
 
 set -euo pipefail
 

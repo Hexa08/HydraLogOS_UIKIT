@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# HydraUI  Professional UI Installer
+# HydraUI Pixel Professional Installer
 # Version: 2.0.0
-# Author: Hexa Innovate Org
+# Author: HydraUI Team
 
 set -euo pipefail
 
@@ -11,6 +11,7 @@ readonly RED='\033[0;31m'
 readonly GREEN='\033[0;32m'
 readonly YELLOW='\033[1;33m'
 readonly BLUE='\033[0;34m'
+
 readonly PURPLE='\033[0;35m'
 readonly CYAN='\033[0;36m'
 readonly WHITE='\033[1;37m'
@@ -111,11 +112,11 @@ show_banner() {
     ██╔══██║  ╚██╔╝  ██║  ██║██╔══██╗██╔══██║██║   ██║██║
     ██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║╚██████╔╝██║
     ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝
-                        Pixel UI Professional Installer
+                              Professional UI Installer
 EOF
     echo -e "${NC}"
     echo -e "${CYAN}Version: ${WHITE}$CURRENT_VERSION${NC}"
-    echo -e "${CYAN}Author:  ${WHITE}Hexa Innovate Org ${NC}"
+    echo -e "${CYAN}Author:  ${WHITE}HydraUI Team${NC}"
     echo
 }
 
@@ -422,7 +423,7 @@ apply_settings() {
 
 # Main installation function
 main_install() {
-    local total_steps=7
+    local total_steps=5
     local current_step=0
     
     echo -e "${CYAN}Installation Progress:${NC}"
@@ -433,36 +434,27 @@ main_install() {
     echo -e "${WHITE}[$current_step/$total_steps]${NC} Installing dependencies..."
     install_dependencies
     
-    # Step 2: Language file
+    # Step 2-5: Downloading UI kits (combined display)
     ((current_step++))
-    echo -e "${WHITE}[$current_step/$total_steps]${NC} Setting up language support..."
+    echo -e "${WHITE}[$current_step/$total_steps]${NC} Downloading UI kits..."
     create_language_file
-    
-    # Step 3: Theme
-    ((current_step++))
-    echo -e "${WHITE}[$current_step/$total_steps]${NC} Installing theme..."
     install_theme
-    
-    # Step 4: Icons
-    ((current_step++))
-    echo -e "${WHITE}[$current_step/$total_steps]${NC} Installing icons..."
     install_icons
-    
-    # Step 5: Wallpaper
-    ((current_step++))
-    echo -e "${WHITE}[$current_step/$total_steps]${NC} Installing wallpaper..."
     install_wallpaper
-    
-    # Step 6: Extensions
-    ((current_step++))
-    echo -e "${WHITE}[$current_step/$total_steps]${NC} Installing extensions..."
     install_extensions
     
-    # Step 7: Configuration
+    # Step 5: Setting up
     ((current_step++))
-    echo -e "${WHITE}[$current_step/$total_steps]${NC} Applying configuration..."
+    echo -e "${WHITE}[$current_step/$total_steps]${NC} Setting up..."
     configure_conky
     apply_settings
+    
+    ((current_step++))
+    echo -e "${WHITE}[$current_step/$total_steps]${NC} Finalizing..."
+    sleep 1
+    
+    ((current_step++))
+    echo -e "${WHITE}[$current_step/$total_steps]${NC} Finished!"
     
     echo
     progress_bar $total_steps $total_steps
@@ -476,12 +468,12 @@ show_success() {
     echo -e "${GREEN}║                    🎉 Installation Complete! 🎉                        ║${NC}"
     echo -e "${GREEN}╚═══════════════════════════════════════════════════════════════════════╝${NC}"
     echo
-    echo -e "${WHITE}HydraUI Pixel UI has been successfully installed!${NC}"
+    echo -e "${WHITE}HydraUI Pixel UI has been successfully installed and applied!${NC}"
     echo
-    echo -e "${CYAN}Next steps:${NC}"
-    echo "  1. Log out and log back in (or restart your session)"
-    echo "  2. Open GNOME Tweaks to fine-tune your settings"
-    echo "  3. Enable extensions using Extensions app"
+    echo -e "${CYAN}✓ Theme automatically applied${NC}"
+    echo -e "${CYAN}✓ Extensions enabled${NC}"
+    echo -e "${CYAN}✓ Wallpaper set${NC}"
+    echo -e "${CYAN}✓ Conky configured${NC}"
     echo
     echo -e "${CYAN}Installed components:${NC}"
     echo "  ✓ Layan GTK Theme"
@@ -492,7 +484,11 @@ show_success() {
     echo "  ✓ Conky System Monitor"
     echo "  ✓ Multi-language Support"
     echo
-    echo -e "${YELLOW}To uninstall, run this script again and choose 'Remove installation'${NC}"
+    echo -e "${YELLOW}If some changes are not visible immediately:${NC}"
+    echo "  • Press Alt+F2, type 'r' and press Enter to reload GNOME Shell"
+    echo "  • Or log out and log back in"
+    echo
+    echo -e "${GREEN}Enjoy your new HydraUI Pixel theme! 🎨${NC}"
     echo
 }
 

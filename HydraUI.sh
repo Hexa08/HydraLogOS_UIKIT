@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# HydraUI Pixel Professional Installer
+# HydraUI  Professional UI Installer
 # Version: 2.0.0
-# Author: HydraUI Team
+# Author: Hexa Innovate Org 
 
 set -euo pipefail
 

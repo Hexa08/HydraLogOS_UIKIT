@@ -92,6 +92,16 @@ confirm_installation() {
     [[ "$response" =~ ^[nN] ]] && log INFO "Installation cancelled" && exit 0
 }
 
+# Check if already installed
+check_existing_installation() {
+    if [[ -f "$INSTALL_MARKER" ]]; then
+        installed_version=$(cat "$VERSION_FILE" 2>/dev/null || echo "unknown")
+        log WARN "HydraUI is already installed (version $installed_version)."
+        read -rp "$(echo -e ${WHITE}Reinstall/Update? [Y/n]: ${NC})" response
+        [[ "$response" =~ ^[nN] ]] && log INFO "Exiting installer." && exit 0
+    fi
+}
+
 # Check GNOME and commands
 check_requirements() {
     log INFO "Checking system requirements..."

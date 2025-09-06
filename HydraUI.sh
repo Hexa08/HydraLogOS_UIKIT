@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# HydraUI  Professional UI Installer
+# HydraUI Pixel Professional Installer
 # Version: 2.0.0
-# Author: Hexa Innovate Org 
+# Author: HydraUI Team
 
 set -euo pipefail
 
@@ -11,7 +11,6 @@ readonly RED='\033[0;31m'
 readonly GREEN='\033[0;32m'
 readonly YELLOW='\033[1;33m'
 readonly BLUE='\033[0;34m'
-
 readonly PURPLE='\033[0;35m'
 readonly CYAN='\033[0;36m'
 readonly WHITE='\033[1;37m'
@@ -112,7 +111,7 @@ show_banner() {
     ██╔══██║  ╚██╔╝  ██║  ██║██╔══██╗██╔══██║██║   ██║██║
     ██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║╚██████╔╝██║
     ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝
-                              Professional UI Installer
+                        Pixel UI Professional Installer
 EOF
     echo -e "${NC}"
     echo -e "${CYAN}Version: ${WHITE}$CURRENT_VERSION${NC}"
@@ -478,12 +477,12 @@ show_success() {
     echo -e "${CYAN}Installed components:${NC}"
     echo "  ✓ Layan GTK Theme"
     echo "  ✓ Candy Icon Pack"
-    echo "  ✓ Custom  Wallpaper"
+    echo "  ✓ Custom Pixel Wallpaper"
     echo "  ✓ Blur My Shell Extension"
     echo "  ✓ Just Perfection Extension"
     echo "  ✓ Conky System Monitor"
     echo "  ✓ Multi-language Support"
-    echo 
+    echo
     echo -e "${YELLOW}If some changes are not visible immediately:${NC}"
     echo "  • Press Alt+F2, type 'r' and press Enter to reload GNOME Shell"
     echo "  • Or log out and log back in"

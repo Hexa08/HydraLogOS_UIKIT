@@ -116,7 +116,7 @@ show_banner() {
 EOF
     echo -e "${NC}"
     echo -e "${CYAN}Version: ${WHITE}$CURRENT_VERSION${NC}"
-    echo -e "${CYAN}Author:  ${WHITE}HydraUI Team${NC}"
+    echo -e "${CYAN}Author:  ${WHITE}Hexa Innovate Org ${NC}"
     echo
 }
 
@@ -478,12 +478,12 @@ show_success() {
     echo -e "${CYAN}Installed components:${NC}"
     echo "  ✓ Layan GTK Theme"
     echo "  ✓ Candy Icon Pack"
-    echo "  ✓ Custom Pixel Wallpaper"
+    echo "  ✓ Custom  Wallpaper"
     echo "  ✓ Blur My Shell Extension"
     echo "  ✓ Just Perfection Extension"
     echo "  ✓ Conky System Monitor"
     echo "  ✓ Multi-language Support"
-    echo
+    echo 
     echo -e "${YELLOW}If some changes are not visible immediately:${NC}"
     echo "  • Press Alt+F2, type 'r' and press Enter to reload GNOME Shell"
     echo "  • Or log out and log back in"
